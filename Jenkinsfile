@@ -5,8 +5,7 @@ pipline{
         step{
             echo "Start Building"
             sh "npm install"
-            sh "npmgit add .
-            git run build"
+            sh "npm run build"
             echo "Building Completed"
         }
     }
