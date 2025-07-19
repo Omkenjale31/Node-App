@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     environment {
-        DEPLOY_DIR = 'var/www/html'
+        DEPLOY_DIR = '/var/www/html'
         SERVICE_NAME ='nginx'
     }
     stages{
