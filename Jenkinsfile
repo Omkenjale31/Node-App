@@ -17,7 +17,7 @@ pipeline{
             }
         }
 
-        Stage('Deploy') {
+        stage('Deploy') {
             steps {
                 echo 'Deploying build to local web server...'
 
