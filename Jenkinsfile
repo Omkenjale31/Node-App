@@ -31,7 +31,7 @@ pipeline{
                 ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${EC2_HOST} 'mkdir -p ${REMOTE_PATH}'
 
                  echo "Copying Distribution to Remote Path"
-                scp -o StrictHostKeyChecking=no -r dist/* ${REMOTE_USER}@${EC2_HOST} :${REMOTE_PATH}/
+                scp -o StrictHostKeyChecking=no -r dist/* ${REMOTE_USER}@${EC2_HOST}:${REMOTE_PATH}/
 
                 echo "Retarting Nginx"
                 ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${EC2_HOST}'
