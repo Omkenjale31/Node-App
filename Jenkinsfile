@@ -24,7 +24,7 @@ pipeline{
 
              steps{
             echo "Starting Deployment"
-            sshagent(credential: [env.SSH_CREDENTIAL_ID]{
+            sshagent(credentials: [env.SSH_CREDENTIAL_ID]){
 
                 sh """
                 echo "Credential Remote Directory"
@@ -39,7 +39,7 @@ pipeline{
                 sudo cp-r ${REMOTE_PATH}/* ${WEB_ROOT}/
                 sudo systemctl restart ${SERVER}
 
-              '
+              
 
                 """
                 }
